@@ -52,7 +52,7 @@ class UsuarioController extends Controller
 		if(!isset($us))
 			dd("usuario no existe");
 			// return redirect('/')->with('error', 'Error LOGIN!'); 
-		dd("usuario existe");
+		dd("usuario existe", $rq->password, $us->password);
 		// dd($rq->password , $us->password, Hash::check($rq->password , $us->password));
 		if(Hash::check($rq->password , $us->password))
 		{
@@ -70,7 +70,7 @@ class UsuarioController extends Controller
 
 		}
 		
-		dd('no login');
+		dd('contraeña incorrecta');
 		return redirect('/'); 
 		
 	}

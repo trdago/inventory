@@ -48,7 +48,7 @@ class UsuarioController extends Controller
 
 		$us = User::where('run', $rq->run)
 				->first();
-		dd($us);
+		dd(count($us));
 
 		if(count($us)==0)
 			return redirect('/')->with('error', 'Error LOGIN!'); 

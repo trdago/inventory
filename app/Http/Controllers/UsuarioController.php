@@ -58,12 +58,12 @@ class UsuarioController extends Controller
 		{
 			// dd("contraseña correcta");
     		Auth::login($us);
-			dd("se creo el login");
+			// dd("se creo el login");
     		// $this->log("sys", "login", "", "");
     		$mensaje ='Bienvenido '.Auth::user()->name;
     		// return redirect('/admin');
 
-    		dd("logeado");
+    		// dd("logeado");
     		return redirect('/admin')
               ->with('msg', ['class'=>'alert-success', 
               'icon'=>'glyphicon-ok', 

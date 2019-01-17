@@ -29,7 +29,10 @@ Route::get('logout', ['uses'=>'UsuarioController@logout', 'as'=> 'syslogout']);
 
 Route::group(['middleware' => ['auth', 'administrador'], 'prefix'=>'admin'], function () 
 {
-	Route::get('/', ['uses'=>'UsuarioController@index', 'as'=> 'admin.index']);
+	Route::get('/', function(){
+		dd("logeado");
+	});
+	// Route::get('/', ['uses'=>'UsuarioController@index', 'as'=> 'admin.index']);
 
 	Route::group(['prefix'=>'producto'], function()
 	{

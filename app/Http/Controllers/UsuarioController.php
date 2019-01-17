@@ -50,8 +50,9 @@ class UsuarioController extends Controller
 				->first();
 
 		if(!isset($us))
-			return redirect('/')->with('error', 'Error LOGIN!'); 
-
+			dd("usuario no existe");
+			// return redirect('/')->with('error', 'Error LOGIN!'); 
+		dd("usuario existe");
 		// dd($rq->password , $us->password, Hash::check($rq->password , $us->password));
 		if(Hash::check($rq->password , $us->password))
 		{

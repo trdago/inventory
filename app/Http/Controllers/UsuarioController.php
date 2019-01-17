@@ -63,7 +63,7 @@ class UsuarioController extends Controller
     		$mensaje ='Bienvenido '.Auth::user()->name;
     		// return redirect('/admin');
 
-    		dd("logeado", $mensaje);
+    		// dd("logeado", $mensaje);
     		return redirect('/admin')
               ->with('msg', ['class'=>'alert-success', 
               'icon'=>'glyphicon-ok', 

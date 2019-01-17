@@ -1,13 +1,13 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="{{ asset('img/logoh.png') }}">
+    <link rel="shortcut icon" href="{{ secure_asset('img/logoh.png') }}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="none">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="admin login">
     <title>inventory</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <style>

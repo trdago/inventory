@@ -68,7 +68,7 @@ class UsuarioController extends Controller
 
 		}
 		
-		// dd('no login');
+		dd('no login');
 		return redirect('/'); 
 		
 	}

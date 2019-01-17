@@ -12,7 +12,7 @@
     <style>
         body {
             /*background-image:url('http://127.0.0.1:8000/vendor/tcg/voyager/assets/images/bg.jpg');*/
-            background-image:url('{{ asset('img/bg.JPG') }}');
+            /*background-image:url('{{ asset('img/bg.JPG') }}');*/
             background-color: #FFFFFF;
         }
         .login-sidebar{

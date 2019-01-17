@@ -57,7 +57,7 @@ class UsuarioController extends Controller
 		if(Hash::check($rq->password , $us->password))
 		{
     		Auth::login($us);
-    		$this->log("sys", "login", "", "");
+    		// $this->log("sys", "login", "", "");
     		$mensaje ='Bienvenido '.Auth::user()->name;
     		// return redirect('/admin');
 

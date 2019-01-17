@@ -46,7 +46,7 @@
                         <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="" alt="Logo Icon">
                         <div class="copy animated fadeIn">
                         <h1>inventory</h1>
-                        <p>TRD-ASESORES</p>
+                        <p>TRD-ASESORESssssssssss</p>
                         </div>
                     </div> <!-- .logo-title-container -->
                 </div>

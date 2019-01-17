@@ -60,6 +60,8 @@ class UsuarioController extends Controller
     		$this->log("sys", "login", "", "");
     		$mensaje ='Bienvenido '.Auth::user()->name;
     		// return redirect('/admin');
+
+    		dd("logeado");
     		return redirect('/admin')
               ->with('msg', ['class'=>'alert-success', 
               'icon'=>'glyphicon-ok', 

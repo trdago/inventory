@@ -1,0 +1,79 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\LoginUser;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Auth\Guard;
+
+use Hash;
+use App\User;
+use App\Log;
+
+
+class UsuarioController extends Controller 
+{
+
+
+	public function index()
+	{
+		// $l = Log::All();
+		// dd($l);
+		$logs = Log::orderby('id', 'DESC')->limit(10)->get();
+		return view('index.admin', compact('logs'));
+	}
+
+	public function viewLogin()
+	{
+		return View('login');
+	}
+
+	public function loginAdmin(LoginUser $rq)
+	{
+		/*
+		* las forma de recuperar es $rq->cmapo
+		* campos que se esperan run, password
+		*/
+
+		// dd(User::All());
+
+		$us = User::where('run', $rq->run)
+				->first();
+		// dd($us);
+
+		if(count($us)==0)
+			return redirect('/')->with('error', 'Error LOGIN!'); 
+
+		// dd($rq->password , $us->password, Hash::check($rq->password , $us->password));
+		if(Hash::check($rq->password , $us->password))
+		{
+    		Auth::login($us);
+    		$this->log("sys", "login", "", "");
+    		$mensaje ='Bienvenido '.Auth::user()->name;
+    		// return redirect('/admin');
+    		return redirect('/admin')
+              ->with('msg', ['class'=>'alert-success', 
+              'icon'=>'glyphicon-ok', 
+              'msg'=> $mensaje]);
+
+		}
+		
+		// dd('no login');
+		return redirect('/'); 
+		
+	}
+
+	public function logout()
+	{
+		// dd('adios');
+		Auth::logout();
+		return redirect('/'); 
+
+	}
+
+
+}
+

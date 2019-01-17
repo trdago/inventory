@@ -55,6 +55,7 @@ class UsuarioController extends Controller
 		// dd($rq->password , $us->password, Hash::check($rq->password , $us->password));
 		if(Hash::check($rq->password , $us->password))
 		{
+			dd("contraseña correcta");
     		Auth::login($us);
     		// $this->log("sys", "login", "", "");
     		$mensaje ='Bienvenido '.Auth::user()->name;

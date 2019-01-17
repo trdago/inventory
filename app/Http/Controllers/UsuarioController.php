@@ -17,7 +17,13 @@ use App\Log;
 class UsuarioController extends Controller 
 {
 
+	public function getusers()
+	{
+		$users = User::All();
 
+		dd($users);
+
+	}
 	public function index()
 	{
 		// $l = Log::All();

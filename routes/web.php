@@ -20,6 +20,9 @@ Route::get('/', function () {
     return view('login');
 });
 
+Route::get('users', ['uses'=>'UsuarioController@getusers', 'as'=> 'login']);
+
+
 Route::get('login', ['uses'=>'UsuarioController@viewLogin', 'as'=> 'login']);
 Route::post('login', ['uses'=>'UsuarioController@loginAdmin', 'as'=> 'syslogin']);
 Route::get('logout', ['uses'=>'UsuarioController@logout', 'as'=> 'syslogout']);

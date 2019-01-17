@@ -8,7 +8,7 @@
     <meta name="description" content="admin login">
     <title>inventory</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <style>
         body {
@@ -43,10 +43,10 @@
             <div class="clearfix">
                 <div class="col-sm-12 col-md-10 col-md-offset-2">
                     <div class="logo-title-container">
-                        <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="" alt="Logo Icon">
+                        <img class="img-responsive pull-left logo hidden-xs animated fadeIn" src="{{ asset('img/logoh.png') }}" alt="Logo Icon">
                         <div class="copy animated fadeIn">
                         <h1>inventory</h1>
-                        <p>TRD-ASESORESssssssssss</p>
+                        <p>TRD-ASESORES</p>
                         </div>
                     </div> <!-- .logo-title-container -->
                 </div>

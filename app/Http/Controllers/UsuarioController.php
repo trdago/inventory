@@ -49,7 +49,7 @@ class UsuarioController extends Controller
 		$us = User::where('run', $rq->run)
 				->first();
 
-		if(isset($us))
+		if(!isset($us))
 			return redirect('/')->with('error', 'Error LOGIN!'); 
 
 		// dd($rq->password , $us->password, Hash::check($rq->password , $us->password));
